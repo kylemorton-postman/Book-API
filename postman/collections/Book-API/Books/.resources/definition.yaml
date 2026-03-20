@@ -1,4 +1,0 @@
-$kind: collection
-name: Books
-description: CRUD operations for managing books in the collection
-order: 2000
