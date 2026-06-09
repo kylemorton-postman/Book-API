@@ -1,15 +1,14 @@
 $kind: http-request
 name: Delete Book
 method: DELETE
-url: '{{baseUrl}}/api/v1/books/:id'
+url: "{{baseUrl}}/api/v1/books/:id"
 order: 5000
 pathVariables:
   - key: id
-    value: '1'
+    value: "1"
     description: The unique identifier of the book to delete
 scripts:
   - type: afterResponse
-    language: text/javascript
     code: |-
       pm.test("Status code is 200", function () {
           pm.response.to.have.status(200);
@@ -24,4 +23,5 @@ scripts:
           const jsonData = pm.response.json();
           pm.expect(jsonData).to.have.property("id");
       });
-examples: './.resources/Delete Book.resources/examples'
+    language: text/javascript
+examples: ./.resources/Delete Book.resources/examples
