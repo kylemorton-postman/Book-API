@@ -1,15 +1,12 @@
 $kind: http-request
-name: Get Book
+url: "{{baseUrl}}/api/v1/books/:id"
 method: GET
-url: '{{baseUrl}}/api/v1/books/:id'
-order: 2000
 pathVariables:
   - key: id
-    value: '1'
+    value: "1"
     description: The unique identifier of the book
 scripts:
   - type: afterResponse
-    language: text/javascript
     code: |-
       pm.test("Status code is 200", function () {
           pm.response.to.have.status(200);
@@ -27,4 +24,5 @@ scripts:
           pm.expect(jsonData.book).to.have.property("title");
           pm.expect(jsonData.book).to.have.property("author");
       });
-examples: './.resources/Get Book.resources/examples'
+    language: text/javascript
+order: 2389

@@ -41,3 +41,4 @@ scripts:
           pm.expect(jsonData.book).to.have.property("year");
           pm.expect(jsonData.book).to.have.property("publisher");
       });
+examples: './.resources/Update Book.resources/examples'

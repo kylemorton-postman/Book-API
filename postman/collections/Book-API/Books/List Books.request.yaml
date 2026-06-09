@@ -20,3 +20,4 @@ scripts:
       pm.test("Response time under 500ms", function () {
           pm.expect(pm.response.responseTime).to.be.below(500);
       });
+examples: './.resources/List Books.resources/examples'

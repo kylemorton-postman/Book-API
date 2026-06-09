@@ -24,3 +24,4 @@ scripts:
           const jsonData = pm.response.json();
           pm.expect(jsonData).to.have.property("id");
       });
+examples: './.resources/Delete Book.resources/examples'

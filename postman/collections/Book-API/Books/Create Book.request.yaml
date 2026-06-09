@@ -40,3 +40,4 @@ scripts:
               pm.collectionVariables.set("bookId", jsonData.book.id);
           }
       });
+examples: './.resources/Create Book.resources/examples'
